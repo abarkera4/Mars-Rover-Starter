@@ -18,7 +18,7 @@ describe("Message class", function() {
     test("contains a commands array passed into the constructor as the 2nd argument", function (){
         let newCommand = [new Command("STATUS_CHECK"), new Command("MODE_CHANGE", "LOW_POWER")]
         let newMessage = new Message("test", newCommand);
-        expect(newMessage.commands).toEqual(newCommand)
+        expect(newMessage.commands).toEqual(newCommand);
     });
 
 });

@@ -13,12 +13,7 @@ class Rover {
 
       for (let command of message.commands) {
          if (command.commandType === "STATUS_CHECK") {
-            let roverStatus = {
-               mode: this.mode,
-               generatorWatts: this.generatorWatts,
-               position: this.position,
-            };
-            response.results.push({ completed: true, roverStatus });
+            response.results.push({ completed: true, roverStatus: this });
          } else if (command.commandType === "MODE_CHANGE") {
             this.mode = command.value;
             response.results.push({ completed: true });
